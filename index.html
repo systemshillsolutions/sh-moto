@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SystemsHill | Top Case Rack pro CF Moto 800MT-X</title>
+  <meta name="description" content="Účelový zadní nosič pro CF Moto 800MT-X. Navrhl jezdec, který nemohl najít to, co potřeboval — tak ho postavil sám. Vyrobeno v České republice.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SystemsHill | Top Case Rack pro CF Moto 800MT-X">
+  <meta property="og:description" content="Navrhl jezdec, který nemohl najít to, co potřeboval — tak ho postavil sám.">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts: Barlow Condensed (headlines) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-cs">
+
+  <!-- ─── HEADER: Language Toggle ─────────────────────────────────────────── -->
+  <header class="site-header">
+    <a href="/" class="logo-link" aria-label="SystemsHill">
+      <img src="images/logo-dark.svg" alt="SystemsHill" class="site-logo">
+    </a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="cs" onclick="setLang('cs')">CZ</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+  </header>
+
+  <!-- ─── SECTION 1: HERO ──────────────────────────────────────────────────── -->
+  <!--
+    FOTO: images/hero.jpg
+    Zdroj: "Image 8.jpg" ze složky PHOTOS
+    (Martin jede na kurzu, plný profil motorky, blur pozadí, rack vidět)
+  -->
+  <section class="hero">
+    <div class="hero-media">
+      <img
+        src="images/hero.jpg"
+        alt="Martin Korbel riding CF Moto 800MT-X with custom rack at riding course"
+        class="hero-img"
+        loading="eager"
+      >
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="eyebrow">CF MOTO 800MT-X</p>
+      <h1>
+        <span class="cs">Nenašel jsem nosič,<br>který by se mi líbil...<br>tak jsem vyrobil vlastní.</span>
+        <span class="en">The rack I couldn't<br>find anywhere.<br>So I built it.</span>
+      </h1>
+      <p class="hero-sub">
+        <span class="cs">Zadní nosič pro CF Moto 800MT-X — navržený pro terén a měkké brašny.</span>
+        <span class="en">Rear rack for CF Moto 800MT-X — designed for off-road and soft luggage.</span>
+      </p>
+
+      <form class="signup-form" id="hero-form" onsubmit="handleSignup(event, 'hero')">
+        <div class="form-row">
+          <input
+            type="email"
+            class="email-input"
+            id="hero-email"
+            required
+            autocomplete="email"
+            data-placeholder-cs="Váš e-mail"
+            data-placeholder-en="Your email"
+            placeholder="Váš e-mail"
+          >
+          <button type="submit" class="btn-primary">
+            <span class="cs">Chci být informován</span>
+            <span class="en">Notify me</span>
+          </button>
+        </div>
+        <p class="form-note">
+          <span class="cs">Žádný spam. Jen jeden email, až bude připraveno.</span>
+          <span class="en">No spam. One email when it's ready.</span>
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 2: THE PROBLEM ───────────────────────────────────────────── -->
+  <section class="problem">
+    <div class="container">
+      <p class="problem-text cs">
+        Znáš ten pocit, když hledáš díl na motorku, který by odpovídal tvým představám — a buď nenajdeš nic, nebo se nevyrábí pro tvůj typ motorky? Pro 800MT-X a měkké brašny to byl přesně můj případ. Tak vznikl tento nosič.
+      </p>
+      <p class="problem-text en">
+        You know that feeling — searching for a part that matches what you have in mind, only to find nothing, or nothing made for your bike? For the 800MT-X and soft luggage, that was exactly my situation. So this rack came to be.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 3: THE RACK ───────────────────────────────────────────────── -->
+  <section class="product" id="rack">
+    <div class="container">
+      <p class="section-label">
+        <span class="cs">Nosič</span>
+        <span class="en">The Rack</span>
+      </p>
+
+      <!--
+        FOTKY GRIDU:
+        images/rack-clean.jpg   ← IMG_2664.jpeg nebo blurred verze (111–117)
+        images/rack-loaded.jpg  ← IMG_2660.jpeg nebo blurred verze (111–117)
+        images/rack-mount.jpg   ← IMG_2617.jpeg (žádná registrační značka)
+      -->
+      <div class="photo-grid">
+        <div class="photo-item">
+          <img
+            src="images/rack-clean.jpg"
+            alt="CF Moto 800MT-X white rack — close detail showing bracket geometry"
+            loading="lazy"
+          >
+          <p class="caption">
+            <span class="cs">Sedí na motorce, ne vedle ní.</span>
+            <span class="en">Designed to sit flush with the 800MT-X's lines.</span>
+          </p>
+        </div>
+        <div class="photo-item">
+          <img
+            src="images/rack-loaded.jpg"
+            alt="CF Moto 800MT-X rack loaded with Mosko Moto soft luggage"
+            loading="lazy"
+          >
+          <p class="caption">
+            <span class="cs">Otestováno s Mosko Moto. Funguje i s Kriega a dalšími.</span>
+            <span class="en">Tested with Mosko Moto. Works with Kriega and others too.</span>
+          </p>
+        </div>
+        <div class="photo-item">
+          <img
+            src="images/rack-detail.jpg"
+            alt="CF Moto 800MT-X rack — real world detail shot, muddy conditions"
+            loading="lazy"
+          >
+          <p class="caption">
+            <span class="cs">V terénu, ne v showroomu.</span>
+            <span class="en">Built to be ridden, not displayed.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature callouts -->
+      <div class="features">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/>
+              <line x1="16" y1="8" x2="2" y2="22"/>
+              <line x1="17.5" y1="15" x2="9" y2="15"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <strong class="cs">1,3 kg</strong>
+            <strong class="en">1.3 kg</strong>
+            <span class="feature-sub cs">Hliník 5083, 5 mm. Nic navíc.</span>
+            <span class="feature-sub en">Al 5083, 5mm. Nothing extra.</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <strong class="cs">Bez vrtání</strong>
+            <strong class="en">Bolt-on fit</strong>
+            <span class="feature-sub cs">Na stávající body rámu, žádné úpravy.</span>
+            <span class="feature-sub en">No drilling, no modifications.</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 20V10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/>
+              <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+              <line x1="12" y1="12" x2="12" y2="18"/>
+              <line x1="9" y1="15" x2="15" y2="15"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <strong class="cs">Měkké brašny v pohodě</strong>
+            <strong class="en">Soft luggage compatible</strong>
+            <span class="feature-sub cs">Mosko Moto, Kriega, Giant Loop.</span>
+            <span class="feature-sub en">Mosko Moto, Kriega, Giant Loop.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 4: THE BUILDER ────────────────────────────────────────────── -->
+  <section class="builder">
+    <div class="container">
+      <!--
+        FOTO: images/builder.jpg
+        Zdroj: "Image 4.jpg" ze složky PHOTOS
+        (Martin na kurzu — ne studio foto, skutečný moment)
+      -->
+      <div class="builder-grid">
+        <div class="builder-photo">
+          <img
+            src="images/builder.jpg"
+            alt="Martin Korbel — mechanical engineer and CF Moto 800MT-X rider"
+            loading="lazy"
+          >
+        </div>
+        <div class="builder-text">
+          <h2>
+            <span class="cs">Martin Korbel</span>
+            <span class="en">Martin Korbel</span>
+          </h2>
+          <p class="cs">
+            Martin v terénu teprve začíná. Ví ale, kde chce jednou jezdit — Trans Europe Trail, BDR, vícedenní výlety daleko od asfaltu. 800MT-X si pořídil proto, že je na to dělaná. Chce jezdit s měkkými brašnami, ne s tuhým kufrem. Hledal vhodný nosič, ale žádný mu nevyhovoval — a tak se rozhodl vyrobit si vlastní.
+          </p>
+          <p class="en">
+            Martin is just getting started off-road. But he knows where he wants to ride — Trans Europe Trail, BDR, multi-day trips far from tarmac. He got the 800MT-X because it's built for that. He wanted to ride with soft luggage, not a hard case. He looked for a rack that would work. Nothing fit — so he designed one and had it made.
+          </p>
+          <a href="#" class="social-follow cs">Sleduj stavbu → Instagram</a>
+          <a href="#" class="social-follow en">Follow the build → Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 5: BUILD LOG ──────────────────────────────────────────────── -->
+  <section class="buildlog">
+    <div class="container">
+      <p class="section-label">
+        <span class="cs">Build log</span>
+        <span class="en">Build log</span>
+      </p>
+      <p class="buildlog-intro cs">Jak to celé vznikalo — od naskenované motorky po první naložené brašny.</p>
+      <p class="buildlog-intro en">How the rack was built — from a 3D scan to the first loaded ride.</p>
+
+      <div class="log-entries">
+
+        <!-- Entry 3 — nejnovější / most recent -->
+        <div class="log-entry">
+          <div class="log-img-wrap">
+            <img
+              src="images/log-3.jpg"
+              alt="Finished rack — white powder coat, Mosko Moto bags loaded at riding course"
+              loading="lazy"
+            >
+          </div>
+          <div class="log-body">
+            <span class="log-date cs">Jaro 2026</span>
+            <span class="log-date en">Spring 2026</span>
+            <p class="cs">Práškový nástřik bílá — v garáži. Jel jsem s tím na kurz, brašny naložené. Takhle to mělo vypadat od začátku. Teď jde do fáze 2: standardizace výroby.</p>
+            <p class="en">White powder coat — done in a garage. Took it to a riding course with bags loaded. This is what it was supposed to look like. Now moving into phase 2: standardizing production.</p>
+          </div>
+        </div>
+
+        <!-- Entry 2 — výroba / manufacturing -->
+        <div class="log-entry">
+          <div class="log-img-wrap">
+            <img
+              src="images/log-2.jpg"
+              alt="Raw aluminum rack — first fit test ride in Czech countryside"
+              loading="lazy"
+            >
+          </div>
+          <div class="log-body">
+            <span class="log-date cs">Zima 2025–26</span>
+            <span class="log-date en">Winter 2025–26</span>
+            <p class="cs">Laserové řezání, pak ohýbání. Z toho vznikly tři kusy. Jeden přežil. Šel rovnou na motorku — první jízda, syrový hliník, žádný lak. Jen zjistit, jestli to sedí. Sedělo.</p>
+            <p class="en">Laser cutting, then bending. Three pieces came out. One survived. Went straight onto the bike — first ride, raw aluminum, no paint. Just checking if it fits. It did.</p>
+          </div>
+        </div>
+
+        <!-- Entry 1 — nejstarší / oldest -->
+        <div class="log-entry">
+          <div class="log-img-wrap log-img-wrap--model">
+            <img
+              src="images/model.png"
+              alt="3D CAD model of the rack — output of the Bluelight scan and CAD design phase"
+              loading="lazy"
+            >
+          </div>
+          <div class="log-body">
+            <span class="log-date cs">Podzim 2025</span>
+            <span class="log-date en">Autumn 2025</span>
+            <p class="cs">Motorka dorazila. Bylo jasné, co chybí. Nejdřív 3D scan na Olomoucké univerzitě — Bluelight skener, přesná geometrie rámu. Z dat vznikl model, z modelu první návrh v CADu. Hliník 5083, 5 mm.</p>
+            <p class="en">The bike arrived. The gap was obvious. First step: 3D scan at Olomouc University — Bluelight scanner, precise frame geometry. From the data came a model, from the model the first CAD design. Aluminum 5083, 5mm.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 6: EMAIL SIGNUP REPEAT ──────────────────────────────────── -->
+  <section class="signup-section" id="chci">
+    <div class="container signup-inner">
+      <h2>
+        <span class="cs">Chceš ho mít?</span>
+        <span class="en">Want one?</span>
+      </h2>
+      <p>
+        <span class="cs">Nech nám e-mail. Napíšeme ti, až půjde do výroby — a kolik bude stát.</span>
+        <span class="en">Leave your email. We'll tell you when it's ready and what it costs.</span>
+      </p>
+
+      <form class="signup-form signup-form--large" id="bottom-form" onsubmit="handleSignup(event, 'bottom')">
+        <div class="form-row">
+          <input
+            type="email"
+            class="email-input"
+            id="bottom-email"
+            required
+            autocomplete="email"
+            data-placeholder-cs="Váš e-mail"
+            data-placeholder-en="Your email"
+            placeholder="Váš e-mail"
+          >
+          <button type="submit" class="btn-primary">
+            <span class="cs">Chci být informován</span>
+            <span class="en">Notify me</span>
+          </button>
+        </div>
+        <p class="form-note">
+          <span class="cs">Žádný spam. Jen jeden email.</span>
+          <span class="en">No spam. One email.</span>
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img src="images/logo-dark.svg" alt="SystemsHill" class="footer-logo">
+        <span class="footer-location">Olomouc, Czech Republic</span>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="footer-link">Instagram</a>
+        <a href="#" class="footer-link">Facebook</a>
+      </div>
+      <div class="footer-credit">
+        <span>© 2026 SystemsHill</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
