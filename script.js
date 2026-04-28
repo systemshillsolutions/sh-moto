@@ -74,8 +74,7 @@ async function handleSignup(event, formId) {
   try {
     await fetch(MAKE_WEBHOOK, {
       method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, source: formId })
     });
   } catch (e) {
