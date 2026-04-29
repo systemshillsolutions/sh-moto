@@ -7,7 +7,7 @@
    body.lang-cs / body.lang-en drives all CSS visibility.
    ─────────────────────────────────────────────────────────────────────────── */
 
-function setLang(lang) {
+function setLang(lang, persist) {
   document.body.className = `lang-${lang}`;
 
   // Update active button state
@@ -23,31 +23,28 @@ function setLang(lang) {
   // Update html lang attribute for accessibility
   document.documentElement.lang = lang === 'cs' ? 'cs' : 'en';
 
-  // Persist preference
-  try { localStorage.setItem('rack-lang', lang); } catch (e) {}
+  // Persist only when user explicitly switches — keyed per domain
+  if (persist) {
+    try {
+      const key = 'rack-lang-' + window.location.hostname.replace('www.', '');
+      localStorage.setItem(key, lang);
+    } catch (e) {}
+  }
 }
 
 // Detect default language from domain:
-// sh-moto.cz / www.sh-moto.cz → Czech
-// sh-moto.com / www.sh-moto.com → English
-// Saved user preference (localStorage) always overrides domain default.
+// sh-moto.cz → Czech, sh-moto.com → English
+// User's manual switch (saved per domain) overrides domain default.
 (function initLang() {
-  let lang = 'cs'; // fallback default
+  const hostname = window.location.hostname.replace('www.', '');
+  let lang = hostname.endsWith('sh-moto.com') ? 'en' : 'cs';
 
-  const hostname = window.location.hostname;
-  if (hostname.endsWith('sh-moto.com')) {
-    lang = 'en';
-  } else if (hostname.endsWith('sh-moto.cz')) {
-    lang = 'cs';
-  }
-
-  // User's explicit choice overrides domain default
   try {
-    const saved = localStorage.getItem('rack-lang');
+    const saved = localStorage.getItem('rack-lang-' + hostname);
     if (saved) lang = saved;
   } catch (e) {}
 
-  setLang(lang);
+  setLang(lang, false);
 })();
 
 
