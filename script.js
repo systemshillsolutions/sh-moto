@@ -27,11 +27,27 @@ function setLang(lang) {
   try { localStorage.setItem('rack-lang', lang); } catch (e) {}
 }
 
-// Restore saved language preference on load
+// Detect default language from domain:
+// sh-moto.cz / www.sh-moto.cz → Czech
+// sh-moto.com / www.sh-moto.com → English
+// Saved user preference (localStorage) always overrides domain default.
 (function initLang() {
-  let saved = 'cs';
-  try { saved = localStorage.getItem('rack-lang') || 'cs'; } catch (e) {}
-  setLang(saved);
+  let lang = 'cs'; // fallback default
+
+  const hostname = window.location.hostname;
+  if (hostname.endsWith('sh-moto.com')) {
+    lang = 'en';
+  } else if (hostname.endsWith('sh-moto.cz')) {
+    lang = 'cs';
+  }
+
+  // User's explicit choice overrides domain default
+  try {
+    const saved = localStorage.getItem('rack-lang');
+    if (saved) lang = saved;
+  } catch (e) {}
+
+  setLang(lang);
 })();
 
 
