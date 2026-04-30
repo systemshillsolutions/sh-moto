@@ -88,7 +88,7 @@ async function handleSignup(event, formId) {
     await fetch(MAKE_WEBHOOK, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, source: formId })
+      body: JSON.stringify({ email, source: formId, title: email })
     });
   } catch (e) {
     // Fail silently — still show success to user
